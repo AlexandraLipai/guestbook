@@ -81,9 +81,9 @@ class View
             echo '<div>ПРИ ВВОДЕ ДОПУЩЕНЫ ОШИБКИ:<br/>' . $this->error . '</div>';
         echo
         '<form method="post" action="index.php">
-            Ваше имя<br/><input type="text" size="20" maxlength="20" name="name"  placeholder="your name" value="'.$this->check().'"><br/><br/>
-            E-mail<br/><input type="email" name="email" placeholder="your email"> <br><br>
-            Ваше сообщение<br/><textarea name="message" cols="150" rows="5" placeholder="your message"></textarea><br/>
+            Ваше имя<br/><input type="text" size="20" maxlength="20" name="name"  placeholder="your name" value='.$this->dataForm['name'].'><br/><br/>
+            E-mail<br/><input type="email" name="email" placeholder="your email" value='.$this->dataForm['email'].'><br><br>
+            Ваше сообщение<br/><textarea name="message" cols="150" rows="5" placeholder="your message">' . $this->dataForm['message'] .'</textarea><br/>
             <input type="submit" value="Отправить"><br/><br/>
         </form>';
     }
